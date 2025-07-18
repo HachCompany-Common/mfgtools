@@ -368,6 +368,11 @@ static constexpr BuiltInScriptRawData g_builtin_cmd[] =
 		,"clean the existing bootloader from the target"
 	},
 	{
+		"hach_erase_and_flash",
+#include "hach_erase_and_flash.clst"
+		,"erase all existing data and reflash target"
+	},
+	{
 		nullptr,
 		nullptr,
 		nullptr,

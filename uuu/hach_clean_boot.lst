@@ -1,0 +1,16 @@
+uuu_version 1.4.149
+
+# Get into u-boot, if the board isn't already booted
+SDPS: boot -scanterm -f _flash.bin -scanlimited 0x800000
+
+# Erase the loader/partitions from each SD device
+FB: ucmd mmc dev 1
+FB: ucmd mmc erase 0 1024
+FB: ucmd mmc dev 2
+FB: ucmd mmc erase 0 1024
+FB: ucmd mmc dev 2 1
+FB: ucmd mmc erase 0 1024
+
+# Now reset, which should put the device back into the boot ROM
+FB: acmd reset
+FB: done

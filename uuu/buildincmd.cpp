@@ -363,6 +363,11 @@ static constexpr BuiltInScriptRawData g_builtin_cmd[] =
 		,"burn whole image io nvme storage"
 	},
 	{
+		"hach_clean_boot",
+#include "hach_clean_boot.clst"
+		,"clean the existing bootloader from the target"
+	},
+	{
 		nullptr,
 		nullptr,
 		nullptr,

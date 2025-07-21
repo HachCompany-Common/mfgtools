@@ -37,6 +37,8 @@ set(LSTS
 	sd_burn_all.lst
 	nand_burn_loader.lst
 	nvme_burn_all.lst
+	hach_clean_boot.lst
+	hach_erase_and_flash.lst
 )
 
 link_directories(${CMAKE_CURRENT_SOURCE_DIR}/libuuu ${LIBUSB_LIBRARY_DIRS} ${LIBZSTD_LIBRARY_DIRS} ${LIBZ_LIBRARY_DIRS} ${TINYXML2_LIBRARY_DIRS})

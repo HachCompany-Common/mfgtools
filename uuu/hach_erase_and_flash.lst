@@ -1,0 +1,28 @@
+uuu_version 1.4.149
+
+# @_flash.bin            | bootloader, which can extract from wic image
+# @_image   [_flash.bin] | wic image burn to emmc.
+
+# Get into u-boot, if the board isn't already booted
+SDPS: boot -scanterm -f _flash.bin -scanlimited 0x800000
+
+# Completely erase all SD/eMMC devices
+FB: ucmd mmc dev 1
+FB: ucmd mmc erase 0 0x7fffffff
+FB: ucmd mmc dev 2
+FB: ucmd mmc erase 0 0x7fffffff
+FB: ucmd mmc dev 2 1
+FB: ucmd mmc erase 0 0x7fffffff
+
+# load eMMC using the same commands as emmc_burn_all.lst
+FB: ucmd setenv fastboot_dev mmc
+FB: ucmd setenv mmcdev ${emmc_dev}
+FB: ucmd mmc dev ${emmc_dev}
+FB: flash -raw2sparse all _image
+FB: flash -scanterm -scanlimited 0x800000 bootloader _flash.bin
+FB: ucmd if env exists emmc_ack; then ; else setenv emmc_ack 0; fi;
+FB: ucmd mmc partconf ${emmc_dev} ${emmc_ack} 1 0
+
+# reset the board, booting the new image
+FB: acmd reset
+FB: done

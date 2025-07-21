@@ -147,7 +147,13 @@ type $(SolutionDir)\..\uuu\fat_write.lst &gt;&gt; $(SolutionDir)\..\uuu\fat_writ
 echo )####^" &gt;&gt; $(SolutionDir)\..\uuu\fat_write.clst
 echo R^"####( &gt; $(SolutionDir)\..\uuu\nand_burn_loader.clst
 type $(SolutionDir)\..\uuu\nand_burn_loader.lst &gt;&gt; $(SolutionDir)\..\uuu\nand_burn_loader.clst
-echo )####^" &gt;&gt; $(SolutionDir)\..\uuu\nand_burn_loader.clst</Command>
+echo )####^" &gt;&gt; $(SolutionDir)\..\uuu\nand_burn_loader.clst
+echo R^"####( &gt; $(SolutionDir)\..\uuu\hach_clean_boot.clst
+type $(SolutionDir)\..\uuu\hach_clean_boot.lst &gt;&gt; $(SolutionDir)\..\uuu\hach_clean_boot.clst
+echo )####^" &gt;&gt; $(SolutionDir)\..\uuu\hach_clean_boot.clst
+echo R^"####( &gt; $(SolutionDir)\..\uuu\hach_erase_and_flash.clst
+type $(SolutionDir)\..\uuu\hach_erase_and_flash.lst &gt;&gt; $(SolutionDir)\..\uuu\hach_erase_and_flash.clst
+echo )####^" &gt;&gt; $(SolutionDir)\..\uuu\hach_erase_and_flash.clst</Command>
     </PreBuildEvent>
     <CustomBuildStep>
       <TreatOutputAsContent>true</TreatOutputAsContent>
@@ -203,7 +209,13 @@ type $(SolutionDir)\..\uuu\fat_write.lst &gt;&gt; $(SolutionDir)\..\uuu\fat_writ
 echo )####^" &gt;&gt; $(SolutionDir)\..\uuu\fat_write.clst
 echo R^"####( &gt; $(SolutionDir)\..\uuu\nand_burn_loader.clst
 type $(SolutionDir)\..\uuu\nand_burn_loader.lst &gt;&gt; $(SolutionDir)\..\uuu\nand_burn_loader.clst
-echo )####^" &gt;&gt; $(SolutionDir)\..\uuu\nand_burn_loader.clst</Command>
+echo )####^" &gt;&gt; $(SolutionDir)\..\uuu\nand_burn_loader.clst
+echo R^"####( &gt; $(SolutionDir)\..\uuu\hach_clean_boot.clst
+type $(SolutionDir)\..\uuu\hach_clean_boot.lst &gt;&gt; $(SolutionDir)\..\uuu\hach_clean_boot.clst
+echo )####^" &gt;&gt; $(SolutionDir)\..\uuu\hach_clean_boot.clst
+echo R^"####( &gt; $(SolutionDir)\..\uuu\hach_erase_and_flash.clst
+type $(SolutionDir)\..\uuu\hach_erase_and_flash.lst &gt;&gt; $(SolutionDir)\..\uuu\hach_erase_and_flash.clst
+echo )####^" &gt;&gt; $(SolutionDir)\..\uuu\hach_erase_and_flash.clst</Command>
     </PreBuildEvent>
     <CustomBuildStep>
       <TreatOutputAsContent>true</TreatOutputAsContent>
@@ -264,7 +276,13 @@ type $(SolutionDir)\..\uuu\fat_write.lst &gt;&gt; $(SolutionDir)\..\uuu\fat_writ
 echo )####^" &gt;&gt; $(SolutionDir)\..\uuu\fat_write.clst
 echo R^"####( &gt; $(SolutionDir)\..\uuu\nand_burn_loader.clst
 type $(SolutionDir)\..\uuu\nand_burn_loader.lst &gt;&gt; $(SolutionDir)\..\uuu\nand_burn_loader.clst
-echo )####^" &gt;&gt; $(SolutionDir)\..\uuu\nand_burn_loader.clst</Command>
+echo )####^" &gt;&gt; $(SolutionDir)\..\uuu\nand_burn_loader.clst
+echo R^"####( &gt; $(SolutionDir)\..\uuu\hach_clean_boot.clst
+type $(SolutionDir)\..\uuu\hach_clean_boot.lst &gt;&gt; $(SolutionDir)\..\uuu\hach_clean_boot.clst
+echo )####^" &gt;&gt; $(SolutionDir)\..\uuu\hach_clean_boot.clst
+echo R^"####( &gt; $(SolutionDir)\..\uuu\hach_erase_and_flash.clst
+type $(SolutionDir)\..\uuu\hach_erase_and_flash.lst &gt;&gt; $(SolutionDir)\..\uuu\hach_erase_and_flash.clst
+echo )####^" &gt;&gt; $(SolutionDir)\..\uuu\hach_erase_and_flash.clst</Command>
     </PreBuildEvent>
     <CustomBuildStep>
       <TreatOutputAsContent>true</TreatOutputAsContent>
@@ -325,7 +343,13 @@ type $(SolutionDir)\..\uuu\fat_write.lst &gt;&gt; $(SolutionDir)\..\uuu\fat_writ
 echo )####^" &gt;&gt; $(SolutionDir)\..\uuu\fat_write.clst
 echo R^"####( &gt; $(SolutionDir)\..\uuu\nand_burn_loader.clst
 type $(SolutionDir)\..\uuu\nand_burn_loader.lst &gt;&gt; $(SolutionDir)\..\uuu\nand_burn_loader.clst
-echo )####^" &gt;&gt; $(SolutionDir)\..\uuu\nand_burn_loader.clst</Command>
+echo )####^" &gt;&gt; $(SolutionDir)\..\uuu\nand_burn_loader.clst
+echo R^"####( &gt; $(SolutionDir)\..\uuu\hach_clean_boot.clst
+type $(SolutionDir)\..\uuu\hach_clean_boot.lst &gt;&gt; $(SolutionDir)\..\uuu\hach_clean_boot.clst
+echo )####^" &gt;&gt; $(SolutionDir)\..\uuu\hach_clean_boot.clst
+echo R^"####( &gt; $(SolutionDir)\..\uuu\hach_erase_and_flash.clst
+type $(SolutionDir)\..\uuu\hach_erase_and_flash.lst &gt;&gt; $(SolutionDir)\..\uuu\hach_erase_and_flash.clst
+echo )####^" &gt;&gt; $(SolutionDir)\..\uuu\hach_erase_and_flash.clst</Command>
     </PreBuildEvent>
     <CustomBuildStep>
       <TreatOutputAsContent>true</TreatOutputAsContent>

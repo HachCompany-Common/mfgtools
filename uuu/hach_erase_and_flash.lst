@@ -11,8 +11,18 @@ FB: ucmd mmc dev 1
 FB: ucmd mmc erase 0 0x7fffffff
 FB: ucmd mmc dev 2
 FB: ucmd mmc erase 0 0x7fffffff
+
+# The eMMC boot1 hwpart is only a few MB, far smaller than the 2GB a
+# single "mmc erase" call can now cover (mmc_berase() batches the
+# whole requested count into one CMD38 call whenever it's <= 2GB
+# instead of looping in erase-group increments like before), so the
+# 0x7fffffff sentinel overshoots its capacity and erases nothing.
+# Read the real boot hwpart size from EXT_CSD[226] (BOOT_SIZE_MULT,
+# in units of 128KB = 0x100 blocks) so this works on any device.
+FB: ucmd mmc reg read extcsd 226 boot_size_mult
+FB: ucmd setexpr boot_blkcnt ${boot_size_mult} * 0x100
 FB: ucmd mmc dev 2 1
-FB: ucmd mmc erase 0 0x7fffffff
+FB: ucmd mmc erase 0 ${boot_blkcnt}
 
 # load eMMC using the same commands as emmc_burn_all.lst
 FB: ucmd setenv fastboot_dev mmc
